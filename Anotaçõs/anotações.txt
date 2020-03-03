@@ -1,0 +1,39 @@
+<div>
+    <p id="itemName"> Fabricantes </p>
+    <p id="itemQuantidade"> x 0 </p>
+    <p id="itemPreco"> $ Preco </p>
+    <p id="itemDpS"> 0.2 </p>
+    <p id="itemDpsTotal"> 42 </p>
+</div>
+
+aba1 = {"titulo": fabricante.nomeTextual, "quantidade": fabricante.quantidade, "cor":"#543785"}
+
+
+// Bolsa de valores:
+Proposta:
+    - Após um preço pago previamente, pega uma parte do DpS do usuário para produzir dols.
+    - Os dols produzidos ficarão guardados na bolsa comprada.
+    - Cada bolsa terá uma % de rendimento que irá variar entre -20% e 50% que serão as porcentagem
+    do que foi produzido pela bolsa que o usuário recebrá ao terminar o contrato
+
+Funcionamento:
+    - O sistema de bolsa de valores será liberado com o upgrade de 50 Monopólios Interplanetários
+    - O preço vai ser escalável. (PROVISÓRIO) -> 5 minutos de produção
+    - A cada espaço de tempo, o rendimento irá subir ou descer 1% ~ 3% aleatóriamente.
+
+Pré-Requesitos (X):
+    - Sistema de tempo construído (X);
+    - Sistema de aleatoriedade construído (X); 
+
+/*
+Enquanto (Verdadeiro) faca
+    Se rendimento >= 0 entao
+        AleatorioQualificado = Aleatorio.int(0, 50)
+    Senao
+        AleatorioQualificado = Aleatorio.int(0, 20)
+
+    Se (AleatorioQualificado > absoluto(rendimento)) entao
+        retorne Aleatorio.int(0, 3)
+    Senao
+        retorne Aleatorio.int(0, -3)
+*/

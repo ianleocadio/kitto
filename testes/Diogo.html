@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <style>
+            button#m {
+                background-color: rgba(0,0,0,0);
+                margin-bottom: 15px;
+            }
+
+            #m {
+                background-image: url("../images/btc.png");
+                background-position: center;
+                background-size: cover;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+	</head>
+	<body>
+		
+		<p style="font-size: 32" id="dolsText">0</p>
+
+		<div class="buttons">	
+			<button id="m" height="32" width="48"></button>
+			<br>
+			<button id="compra1" onclick="comprarItem('fabricante')">Comprar fabricante: 10 dols</button>
+			<button id="compra2" onclick="comprarItem('fabrica')">Comprar fábrica: 100 dols</button>
+			<button id="compra3" onclick="comprarItem('multinacional')">Comprar multinacional: 1100 dol</button>
+			<button id="compra4" onclick="comprarItem('planetaria')">Comprar planetaria: 12000 dol</button>
+		</div>
+
+		<div class="valores">
+			<p id="dpcText"> 1 DpC(0%) </p>
+			<p id="dpsText"> 0 DpS </p>
+		</div>
+		<div class="itens">
+			<p id="fabricanteText"></p>
+			<p id="fabricaText"></p>
+			<p id="multinacionalText"></p>
+			<p id="planetariaText"></p>
+		</div>
+        
+        <script src="dols.js"></script>
+        <script src="js.js"></script>
+	</body>
+
+</html>

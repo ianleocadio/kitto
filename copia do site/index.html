@@ -1,0 +1,53 @@
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/grid.css">
+		<link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+
+		<script src="javascript/jquery.js"></script>
+	</head>
+	<body>
+		
+		<div id="dolsTextContainer">
+			<p id="dolsText">0</p>
+			<span style="position: absolute; width: 100%; height: 70px; top:0; left: -100%; background-color: rgb(117, 235, 127); z-index: 0;">asdad</span>
+		</div>
+		
+		<section class="container buttons grid"> 
+			<div class="compra grid grid3 barraVertical">
+				<button id="compra1" onclick="comprarItem('fabricante')" class="btn-click ">Comprar fabricante: 10 dols</button> </br>
+				<button id="compra2" onclick="comprarItem('fabrica')" class="btn-click" style="display: none">Comprar fábrica: 100 dols</button> </br>
+				<button id="compra3" onclick="comprarItem('multinacional')" class="btn-click" style="display: none">Comprar multi-nacional: 1100 dol</button> </br>
+				<button id="compra4" onclick="comprarItem('planetaria')" class="btn-click" style="display: none">Comprar planetaria: 12000 dol</button> </br>
+			</div>
+			<div class="main grid grid3">
+				<button id="mainClick" onclick="clique()" height="32" width="48"></button>
+				<span id="dolsBonus">0</span>
+			</div>
+			<div class="up grid grid3 barraVertical" id="upSec">
+			
+			</div>
+		</section>
+
+		<div class="valores">
+			<p id="dpcText"> 1 DpC (0%) </p>
+			<p id="dpsText"> 0 DpS </p>
+		</div>
+
+		<div class="itens">
+			<p id="fabricanteText" style="display:none;"></p> </br>
+			<p id="fabricaText" style="display:none;"></p> </br>
+			<p id="multinacionalText" style="display:none;"></p> </br>
+			<p id="planetariaText"style="display:none;"></p>
+		</div>
+
+		<script>
+			var progressoClickBonus = 0;
+			var progressoClickUpgrade = 0;
+		</script>
+
+		<script src="jajascript.js"></script>
+	</body>
+</html>

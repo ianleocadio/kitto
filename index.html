@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<title>BitClicker</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/grid.css">
+		<link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+
+		<script src="javascript/jquery.js"></script>	
+	</head>
+	<body>
+		<section class="grid max-height">
+			<!--<a href="testes/Rodrigo.html">HTML PICA</a></!-->
+			<section class="container-left max-height grid grid55">
+				<div class="container-left-top">
+					<img src="images/icons/gear.svg" class="option">
+				</div>
+
+				<div class="container-left-middle alinhado-no-centro">
+					<p id="dolsText" style="font-size: 40px;">0</p>
+					<button id="mainClick" onclick="this.blur(); clique(); drawCircle();" class="z-index-10"></button>
+					<div>
+						<canvas id="canvas_mainClick" width="500px" height="500px">
+							
+						</canvas>
+					</div>
+					<!--<span style="position: absolute; width: 100%; height: 70px;padding: 12px; color: rgb(42, 197, 42); left: -100%; top: 0;"></span>-->
+				</div>
+				
+				<div class="container-left-bottom alinhado-no-centro">
+					<p id="dpcText"> 1 DpC (0%) </p>
+					<p id="dpsText"> 0 DpS </p>
+				</div>
+			</section>
+	
+			<section class="container-right grid grid45 max-height">
+				<input type="radio" name="navbar-main-option" id="navbar-main-op1" checked hidden>
+				<input type="radio" name="navbar-main-option" id="navbar-main-op2" hidden>
+				<input type="radio" name="navbar-main-option" id="navbar-main-op3" hidden>
+				
+				<nav class="container-right-left navbar-main">
+					<ul>
+						<label for="navbar-main-op1"><li id="toogle_constructions" class="img-factory"></li></label>
+						<label for="navbar-main-op2"><li id="toogle_information" class="img-info"></li></label>
+						<label for="navbar-main-op3" class="escondido"><li id="toogle_bolsa" class="img-cruz"></li></label>
+					</ul>
+				</nav>
+				
+				<div class="container-right-middle">
+					<div class="container-right-middle-item">
+						<div class="container-right-middle-item-top">
+							<h2 class="border">Item</h2>
+							<div>
+								<img src="images/icons/Factory.svg" id="item_img" width="80px" height="80px" style="float: left;">
+								<h3 id="item_nome"></h3>
+								<h3 id="item_qnt"></h3>
+								<h3 id="item_preco"></h3>
+								<h3 id="item_dps"></h3>
+								
+								<button id="fabricanteCompra" onclick="comprarItem(fabricante)" style="display: none;">Comprar</button> </br>
+								<button id="fabricaCompra" onclick="comprarItem(fabrica)" style="display: none;">Comprar</button> </br>
+								<button id="multinacionalCompra" onclick="comprarItem(multinacional)" style="display: none;">Comprar</button> </br>
+								<button id="planetariaCompra" onclick="comprarItem(planetaria)" style="display: none;">Comprar</button> </br>
+								<button id="minaBitcoinCompra" onclick="comprarItem(minaBitcoin)" style="display: none;">Comprar</button> </br>
+								<button id="monoIntCompra" onclick ="comprarItem(monoInt)" style="display:none;">Comprar</button>
+							</div>
+						</div>
+
+						<div class="container-right-middle-item-bottom" class="z-index-15">
+							<h2 style="height: 30px;" class="border">Upgrades</h2>
+
+							<div id="upSec" class="barra-vertical" style="height: calc(100% - 30px);">
+								
+							</div>
+
+							<div id="upgradeInfo" style="display: none;" class="z-index-10">
+								
+							</div>
+						</div>
+					</div>
+					<div class="container-right-middle-information">
+						<h2 class="border">Dados</h2>
+
+						<div class="grid grid2">
+							<h3>DPS</h3>
+							<p id="informacao_dps">XXX</p>
+
+							<h3>CPS</h3>
+							<p id="informacao_cps">XXX</p>
+						</div>
+						<div class="grid grid2">
+							<h3>Clicks</h3>
+							<p id="informacao_clicks">XXX</p>
+
+							<h3>Dols Total</h3>
+							<p id="informacao_dols_total">XXX</p>
+						</div>
+					</div>
+					<div class="container-right-middle-bolsa" style="color: white;">
+						<p><h1>Bolsa de valores</h1></p>
+						<p id="bolsaEstado"></p>
+						<p id="bolsaRendimento"></p>
+
+						<div id="bolsaGeralInfos" style="display:initial">
+							<p id="bolsaValor"></p>
+							<button id="bolsaContratar" onclick="Bolsa.investir()"> Investir na bolsa </button>
+						</div>
+						<div id="bolsaAtivaInfos" style="display:none">
+							<p id="bolsaDPS"></p>
+							<p id="bolsaDolsProduzidos"></p>
+							<p id="bolsaGanhos"></p>
+							<button id="bolsaEncerrar" onclick="Bolsa.encerrar()"> Finalizar </button>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-right-right barra-vertical">
+					<button id="navbar_items_op1" onclick="mostrarItem(0)">Fabricante</button>
+					<button id="navbar_items_op2" onclick="mostrarItem(1)" style="display:none;">Fabrica</button>
+					<button id="navbar_items_op3" onclick="mostrarItem(2)" style="display:none;">Multinacional</button>
+					<button id="navbar_items_op4" onclick="mostrarItem(3)" style="display:none;">Planetario</button>
+					<button id="navbar_items_op5" onclick="mostrarItem(4)" style="display:none;">Mina de Bitcoin</button>
+					<button id="navbar_items_op6" onclick="mostrarItem(5)" style="display:none;">Monopolio Interplanetário</button>
+				</div>
+			</section>
+		</section>
+		
+		<div>
+			<script src="javascript/Util.js"      > </script>
+			<script src="javascript/Jogo.js"      > </script>
+			<script src="javascript/MainClick.js" > </script>
+			<script src="javascript/Main.js"      > </script>
+			<script src="javascript/Interface.js" > </script>
+			<script src="javascript/screen.js"    > </script>
+		</div>
+		
+	</body>
+</html>

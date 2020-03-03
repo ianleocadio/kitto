@@ -1,0 +1,180 @@
+/* Geral */
+:root {
+    --heightMainSection: 400px;
+}
+
+*, *::before, *::after {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Odibee Sans', cursive;
+}
+
+body {
+    background-color: burlywood;    
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: var(--heightMainSection);
+}
+
+.container .main {
+    margin: calc(var(--heightMainSection) - var(--heightMainSection)/1.1) auto;
+}
+
+/* texto dos dols atuais */
+
+#dolsTextContainer {
+    background-color: rgb(22,22,22);
+}
+
+#dolsText {
+    z-index: 1;
+    position: relative;
+    color: white;
+    font-size: 2.2em;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid brown;
+}
+
+.buttons {
+    background-color: rgb(2, 54, 13);
+    padding: 15px;
+    border-bottom: 3px solid brown;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+}
+
+.buttons button:focus {
+    outline: 0;
+}
+
+.buttons .btn-click:active {
+    background-color: rgb(112, 189, 189);
+}
+
+/*compras*/
+
+.buttons .compra button {                 
+    border: none;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    background-color: cadetblue;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    box-shadow: 3px 3px 2px rgb(56, 99, 100);
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+/* main click aqui */
+
+.buttons .main {
+    text-align: center;
+}
+
+.main button {
+    background-color: rgba(0,0,0,0);
+    margin-bottom: 15px;
+    border: none;
+    background-image: url("../images/btc.png");
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.main #dolsBonus {
+    position: absolute;
+    display: none;
+    transform: translate(-110px, 90px);
+    font-size: 2em;
+    color: white;
+    opacity: 0;
+    position: absolute;
+    display: none;
+    transform: translate(-110px, 90px);
+    font-size: 2em;
+    color: white;
+    opacity: 0;
+}
+
+/* upgrades */
+
+.up {
+    text-align: right;
+    color: rgb(230, 255, 1);
+    background-color: rgb(2, 54, 13);
+    margin-bottom: 2px;
+    height: 170px;  
+    border: 3px solid rgb(95, 58, 10);
+}
+
+.upgrades:nth-child(1) {
+    border-bottom: 3px solid rgb(117, 92, 58);
+}
+
+.upgrades:nth-child(n+3) {
+    border-top: 3px solid rgb(117, 92, 58);
+}
+
+.upgrades p {
+    padding: 15px;
+}
+
+.upgrades .titulo {
+    font-size: 2em;
+}
+
+.upgrades .info{
+    color: rgba(175, 103, 61, 0.911);
+    font-size: 1.4em;
+}
+
+.upgrades:hover{
+    cursor:pointer;
+}
+
+
+/* dpc, dps */
+
+.valores {
+    border-bottom: 3px solid brown;
+    color: white;
+    font-size: 1.7em;
+    background-color:cadetblue;
+}
+
+.valores p {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    border: 3px solid rgb(113, 180, 182);
+    border-radius: 22px;
+}
+
+
+#dpsText {
+    float: right;
+}
+
+/* itens q tu comprou*/
+
+.itens {
+    color: white;
+    font-size: 1.7em;
+    background-color: rgba(197, 115, 67, 0.911);
+}
+
+.itens p {  
+    width: 270px;
+    display: inline-block;
+    margin: 3px;
+    padding: 15px;
+    border: 3px solid cadetblue;
+    border-radius: 22px;
+}
